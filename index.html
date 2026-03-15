@@ -158,7 +158,7 @@
 </div>
 
 <script>
-const API_KEY = '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';
+
 const SYSTEM = 'You are Ferlivo Unlocked, a private AI assistant. Be helpful, direct, and concise. Use markdown formatting where appropriate.';
 const STORAGE_KEY = 'ferlivo_chats';
 
@@ -388,11 +388,10 @@ async function send() {
   var model = modelSelect.value;
 
   try {
-    var res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    var res = await fetch('https://ferlivo-proxy.alizottoone.workers.dev', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + API_KEY,
         'HTTP-Referer': window.location.href,
         'X-Title': 'Ferlivo Unlocked'
       },
